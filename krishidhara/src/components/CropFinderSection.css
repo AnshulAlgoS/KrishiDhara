@@ -31,7 +31,7 @@
 }
 
 .cropfinder-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 700;
   color: #1b3b1b;
   margin-bottom: 1rem;
@@ -39,14 +39,13 @@
 }
 
 .cropfinder-title span {
-  color: #2f7c31;
   background: linear-gradient(45deg, #2f7c31, #a58c00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .cropfinder-subtitle {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   color: #333;
   line-height: 1.7;
 }
@@ -59,12 +58,12 @@
 
 .crop-image {
   max-width: 100%;
+  height: auto;
   margin-bottom: 1rem;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* 🆕 Modern Form Styling */
 .cropfinder-form {
   display: flex;
   flex-direction: column;
@@ -81,7 +80,6 @@
 .cropfinder-form input {
   width: 100%;
   padding: 14px 16px;
-  margin-bottom: 8px;
   border-radius: 10px;
   border: 1px solid #cfcfcf;
   font-size: 1rem;
@@ -109,27 +107,21 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #2f7c31;
-  color: white;
-  border: none;
+  background: #eaf3ea;
+  border: 1px solid #d1e7d1;
+  border-radius: 10px;
   padding: 12px;
-  border-radius: 12px;
-  font-weight: 600;
+  font-weight: 500;
+  color: #1b5e20;
   cursor: pointer;
-  font-size: 1rem;
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition: all 0.2s ease-in-out;
 }
 
 .location-btn:hover {
-  background: #256526;
-  transform: scale(1.03);
+  background: #d7ebd7;
+  transform: translateY(-1px);
 }
 
-.location-btn .icon {
-  font-size: 1.1rem;
-}
-
-/* Submit button with gradient */
 .submit-btn {
   background: linear-gradient(45deg, #2f7c31, #b8860b);
   color: white;
@@ -164,32 +156,72 @@
   to {opacity: 1; transform: translateX(0);}
 }
 
-/* Responsive */
+/* 📱 Tablet Screens */
 @media (max-width: 768px) {
   .cropfinder-container {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
+  }
+  .cropfinder-right {
+    width: 100%;
   }
   .cropfinder-form {
     width: 100%;
+    padding: 1.5rem;
   }
 }
-.location-btn {
+
+/* 📱 Mobile Screens */
+@media (max-width: 468px) {
+  .cropfinder-section {
+    padding: 3rem 1rem;
+  }
+
+  .cropfinder-form {
+    max-width: 340px;
+    margin: 0 auto;
+    gap: 0.8rem;
+    padding: 1.2rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .geo-inputs {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .location-btn,
+  .submit-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .cropfinder-title {
+    font-size: 1.9rem;
+  }
+}
+/* Row for Land Size + State */.input-row {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #eaf3ea;
-  border: 1px solid #d1e7d1;
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #1b5e20;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.location-btn:hover {
-  background: #d7ebd7;
-  transform: translateY(-1px);
+.input-row input,
+.input-row select {
+  flex: 1;
+  min-width: 48%;
+}
+
+@media (max-width: 468px) {
+  .input-row {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .input-row input,
+  .input-row select {
+    min-width: 100%;
+  }
 }

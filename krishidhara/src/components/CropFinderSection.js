@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {LocateFixed} from "lucide-react"; 
+import {LocateFixed} from "lucide-react";
 import "./CropFinderSection.css";
 import cropIllustration from "../assets/crop-illustration.jpg";
 
@@ -8,14 +8,14 @@ const indianStates = [
 ];
 
 const CropFinderSection = ({onFindCrop}) => {
-  const [landSize, setLandSize] = useState("");
-  const [state, setState] = useState("");
-  const [city, setCity] = useState("");
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
+  const [landSize,setLandSize] = useState("");
+  const [state,setState] = useState("");
+  const [city,setCity] = useState("");
+  const [latitude,setLatitude] = useState("");
+  const [longitude,setLongitude] = useState("");
 
   const fetchCoordinates = async () => {
-    if(!city || !state) return;
+    if (!city || !state) return;
     try {
       const res = await fetch(
         `https://nominatim.openstreetmap.org/search?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&country=India&format=json&limit=1`
@@ -26,11 +26,11 @@ const CropFinderSection = ({onFindCrop}) => {
         setLongitude(data[0].lon);
       }
     } catch (error) {
-      console.error("Error fetching coordinates:", error);
+      console.error("Error fetching coordinates:",error);
     }
   };
 
-  const fetchCityState = async (lat, lon) => {
+  const fetchCityState = async (lat,lon) => {
     if (!lat || !lon) return;
     try {
       const res = await fetch(
@@ -46,7 +46,7 @@ const CropFinderSection = ({onFindCrop}) => {
         else if (data.address.village) setCity(data.address.village);
       }
     } catch (error) {
-      console.error("Error fetching city/state:", error);
+      console.error("Error fetching city/state:",error);
     }
   };
 
@@ -58,10 +58,10 @@ const CropFinderSection = ({onFindCrop}) => {
           const lon = pos.coords.longitude.toFixed(6);
           setLatitude(lat);
           setLongitude(lon);
-          fetchCityState(lat, lon);
+          fetchCityState(lat,lon);
         },
         (err) => alert("Unable to fetch location: " + err.message),
-        { enableHighAccuracy: true, timeout: 10000 }
+        {enableHighAccuracy:true,timeout:10000}
       );
     } else {
       alert("Geolocation is not supported by your browser");
@@ -70,7 +70,7 @@ const CropFinderSection = ({onFindCrop}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onFindCrop({landSize, state, city, latitude, longitude});
+    onFindCrop({landSize,state,city,latitude,longitude});
   };
 
   return (
@@ -83,59 +83,60 @@ const CropFinderSection = ({onFindCrop}) => {
             Discover Your Perfect <span>Crop Match</span>
           </h2>
           <p className="cropfinder-subtitle">
-            Our AI analyzes your land, location, and market conditions to recommend 
+            Our AI analyzes your land, location, and market conditions to recommend
             the most profitable crops for your farm.
           </p>
         </div>
 
         {/* Right */}
         <div className="cropfinder-right">
-          <img src={cropIllustration} alt="Crop Illustration" className="crop-image"/>
+          <img src={cropIllustration} alt="Crop Illustration" className="crop-image" />
 
           <form className="cropfinder-form" onSubmit={handleSubmit}>
-            <input 
-              type="number" 
-              placeholder="Land Size (in acres)" 
-              value={landSize} 
-              onChange={(e)=>setLandSize(e.target.value)}
-              required
-            />
+            <div className="input-row">
+              <input
+                type="number"
+                placeholder="Land Size (in acres)"
+                value={landSize}
+                onChange={(e) => setLandSize(e.target.value)}
+                required
+              />
+              <select value={state} onChange={(e) => setState(e.target.value)} required>
+                <option value="">Select State</option>
+                {indianStates.map((s) => (<option key={s} value={s}>{s}</option>))}
+              </select>
+            </div>
 
-            <select value={state} onChange={(e)=>setState(e.target.value)} required>
-              <option value="">Select State</option>
-              {indianStates.map((s)=>(<option key={s} value={s}>{s}</option>))}
-            </select>
-
-            <input 
-              type="text" 
-              placeholder="Enter City / Village" 
-              value={city} 
-              onChange={(e)=>setCity(e.target.value)}
+            <input
+              type="text"
+              placeholder="Enter City / Village"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
               onBlur={fetchCoordinates}
               required
             />
 
             <div className="geo-inputs">
-              <input 
-                type="text" 
-                placeholder="Latitude" 
-                value={latitude} 
-                onChange={(e)=>setLatitude(e.target.value)}
-                onBlur={()=> latitude && longitude && fetchCityState(latitude, longitude)}
+              <input
+                type="text"
+                placeholder="Latitude"
+                value={latitude}
+                onChange={(e) => setLatitude(e.target.value)}
+                onBlur={() => latitude && longitude && fetchCityState(latitude,longitude)}
               />
-              <input 
-                type="text" 
-                placeholder="Longitude" 
-                value={longitude} 
-                onChange={(e)=>setLongitude(e.target.value)}
-                onBlur={()=> latitude && longitude && fetchCityState(latitude, longitude)}
+              <input
+                type="text"
+                placeholder="Longitude"
+                value={longitude}
+                onChange={(e) => setLongitude(e.target.value)}
+                onBlur={() => latitude && longitude && fetchCityState(latitude,longitude)}
               />
-              <button type="button" className="location-btn" onClick={handleLocationFetch}>
-  <LocateFixed size={18} strokeWidth={2.2}/>
-  <span>Get Your Location</span>
-</button>
-
             </div>
+
+            <button type="button" className="location-btn" onClick={handleLocationFetch}>
+              <LocateFixed size={18} strokeWidth={2.2} />
+              <span>Get Your Location</span>
+            </button>
 
             <button type="submit" className="submit-btn">Find Best Crops →</button>
           </form>
