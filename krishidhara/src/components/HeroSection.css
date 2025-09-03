@@ -12,7 +12,7 @@
 .hero-overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.35); /* subtle dark overlay for readability */
+  background: rgba(0,0,0,0.45); /* a bit darker for better contrast */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,85 +20,94 @@
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 680px;
   text-align: left;
   color: white;
+  font-family: "Inter", sans-serif;
 }
 
 .hero-tag {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.2);
   display: inline-block;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
   margin-bottom: 1rem;
+  letter-spacing: 0.3px;
 }
 
 .hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.3;
 }
 
 .hero-title span {
-  color: #d4f8c4;
+  color: #7cff8e; /* a bright green for youthful look */
 }
 
 .hero-subtitle {
-  margin: 1rem 0 2rem;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  margin: 1rem 0 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
   max-width: 600px;
+  opacity: 0.95;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 
 .primary-btn {
-  background-color: #2f7c31;
+  background-color: #28a745;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+  padding: 0.7rem 1.3rem;
+  border-radius: 25px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .primary-btn:hover {
-  background-color: #256526;
+  transform: scale(1.05);
+  background-color: #208d3b;
 }
 
 .secondary-btn {
   background: white;
-  color: #2f7c31;
+  color: #28a745;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+  padding: 0.7rem 1.3rem;
+  border-radius: 25px;
   font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .secondary-btn:hover {
-  transform: translateX(5px);
+  transform: scale(1.05);
 }
 
 .hero-trending {
-  background: rgba(255,255,255,0.1);
-  padding: 10px 15px;
-  border-radius: 12px;
-  font-size: 0.9rem;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
 }
 
-/* Mobile responsiveness */
+/* Mobile */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .hero-subtitle {
     font-size: 1rem;
