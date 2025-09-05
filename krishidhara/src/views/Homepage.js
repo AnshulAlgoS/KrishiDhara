@@ -5,6 +5,8 @@ import HeroSection from "../components/Herosection"
 import CropFinderSection from "../components/CropFinderSection"
 import MarketplaceSection from "../components/MarketplaceSection"
 import "./Homepage.css"
+import logo from "../assets/krishiLogo.png"; 
+
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -37,10 +39,11 @@ const HomePage = () => {
           <div className="footer-col">
             <div className="footer-brand">
               <img
-                src="krishilogo.png"
+                src={logo}
                 alt="Krishi Dhara Logo"
                 className="footer-logo"
               />
+
               <h2>Krishi Dhara</h2>
             </div>
             <p>
