@@ -1,0 +1,157 @@
+/* Marketplace Section Container */
+.marketplace-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom right, #f5fbe7, #fffaf3);
+    text-align: center;
+}
+
+.marketplace-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.marketplace-header .highlight {
+    color: #16a34a;
+    /* green highlight */
+}
+
+.marketplace-header p {
+    color: #475569;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Grid Layout */
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Kit Card */
+.kit-card {
+    position: relative;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Discount Badge */
+.discount-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* Emoji */
+.kit-emoji {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Title */
+.kit-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+/* Rating */
+.rating {
+    font-size: 0.9rem;
+    color: #f59e0b;
+    /* amber star */
+    margin-bottom: 0.6rem;
+}
+
+.rating span {
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+/* Description */
+.kit-description {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 0.8rem;
+}
+
+/* Features List */
+.kit-features {
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    color: #334155;
+    font-size: 0.9rem;
+}
+
+.kit-features li {
+    margin-bottom: 0.3rem;
+    position: relative;
+}
+
+.kit-features li::before {
+    content: "✔";
+    color: #16a34a;
+    position: absolute;
+    left: -1rem;
+    font-size: 0.8rem;
+}
+
+/* Price */
+.kit-price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #16a34a;
+}
+
+.original-price {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    width: 100%;
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #15803d;
+}
