@@ -160,10 +160,10 @@
 
 
 .footer {
-  background: linear-gradient(135deg, #f9fbf8, #ecf8f1); 
+  background: linear-gradient(135deg,#0b3d2e, #14532d); 
   padding: 50px 20px 20px;
   font-family: "Poppins", sans-serif;
-  color: #2e4a29;
+  color: #f1faee;
   margin-top: 50px;
 }
 
@@ -178,7 +178,7 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #2e7d32;
+  color: #f1faee;
 }
 
 .footer-col ul {
@@ -193,13 +193,13 @@
 
 .footer-col ul li a {
   text-decoration: none;
-  color: #3d3d3d;
+  color: #f1faee;
   font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-  color: #1b5e20;
+  color: #f1faee;
 }
 
 .footer-brand {
@@ -216,7 +216,7 @@
 
 .footer p {
   font-size: 0.9rem;
-  color: #555;
+  color: #c9c0c0;
   line-height: 1.5;
 }
 

@@ -53,7 +53,6 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Column 2: Quick Links */}
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
@@ -64,7 +63,7 @@ const HomePage = () => {
             </ul>
           </div>
 
-          {/* Column 3: Company */}
+       
           <div className="footer-col">
             <h4>Company</h4>
             <ul>
@@ -78,7 +77,7 @@ const HomePage = () => {
             </ul>
           </div>
 
-          {/* Column 4: Legal */}
+        
           <div className="footer-col">
             <h4>Legal</h4>
             <ul>
@@ -88,7 +87,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Bottom Row */}
+        
         <div className="footer-bottom">
           <p>
             © {new Date().getFullYear()} Krishi Dhara — From Land to Livelihood
