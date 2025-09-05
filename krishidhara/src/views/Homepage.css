@@ -158,12 +158,15 @@
   }
 }
 
-
 .footer {
-  background: linear-gradient(135deg,#0b3d2e, #14532d); 
+  background: linear-gradient(
+    135deg,
+    hsl(140, 45%, 25%),
+    hsl(110, 50%, 35%)
+  );
+  color: #f1faee; /* pastel cream text */
   padding: 50px 20px 20px;
   font-family: "Poppins", sans-serif;
-  color: #f1faee;
   margin-top: 50px;
 }
 
@@ -199,7 +202,7 @@
 }
 
 .footer-col ul li a:hover {
-  color: #f1faee;
+  color: hsl(140, 60%, 60%); /* slightly brighter green on hover */
 }
 
 .footer-brand {
@@ -216,14 +219,13 @@
 
 .footer p {
   font-size: 0.9rem;
-  color: #c9c0c0;
   line-height: 1.5;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 15px;
-  border-top: 1px solid #c8e6c9;
+  border-top: 1px solid hsl(110, 50%, 20%);
   font-size: 0.85rem;
-  color: #666;
+  color: #f1faee;
 }

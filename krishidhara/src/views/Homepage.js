@@ -44,15 +44,15 @@ const HomePage = () => {
               <h2>Krishi Dhara</h2>
             </div>
             <p>
-              Empowering agriculture with knowledge and sustainable
-              development.
+              Empowering farmers with AI-powered insights, market access, and community support to transform agricultural land into sustainable livelihood opportunities.
             </p>
           </div>
 
           <div className="footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="/mentoshi">Mentoshi</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/mentoshi">Mentorship</a></li>
               <li><a href="/stories">Stories</a></li>
               <li><a href="/cropfinder">CropFinder</a></li>
               <li><a href="/marketplace">Marketplace</a></li>
