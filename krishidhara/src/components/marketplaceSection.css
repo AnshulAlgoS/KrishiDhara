@@ -13,7 +13,6 @@
 
 .marketplace-header .highlight {
     color: #16a34a;
-    /* green highlight */
 }
 
 .marketplace-header p {
@@ -46,16 +45,17 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
+
 /* Discount Badge */
 .discount-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #ef4444;
-    color: #fff;
+    background: linear-gradient(45deg, #facc15, #f59e0b);
+    color: #1b1b1b;
     font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.3rem 0.6rem;
+    font-weight: 700;
+    padding: 0.35rem 0.7rem;
     border-radius: 6px;
 }
 
@@ -76,7 +76,6 @@
 .rating {
     font-size: 0.9rem;
     color: #f59e0b;
-    /* amber star */
     margin-bottom: 0.6rem;
 }
 
