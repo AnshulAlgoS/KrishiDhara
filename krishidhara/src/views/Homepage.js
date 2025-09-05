@@ -19,11 +19,9 @@ const HomePage = () => {
       <HeroSection onStartCropFinder={handleCropFinder} />
       <CropFinderSection onFindCrop={handleCropFinder} />
 
-      {/* Marketplace Section */}
       <section className="homepage-marketplace">
         <MarketplaceSection limit={3} />
 
-        {/* Top-right View All button */}
         <div className="homepage-view-all">
           <button
             className="view-all-btn"
@@ -34,10 +32,8 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Professional Footer */}
       <footer className="footer">
         <div className="footer-container">
-          {/* Column 1: Logo + Tagline */}
           <div className="footer-col">
             <div className="footer-brand">
               <img
