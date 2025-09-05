@@ -1,13 +1,21 @@
 import React from "react";
 import "./App.css";
-import HomePage from "./views/Homepage"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import HomePage from "./views/Homepage";
+import FarmerJourney from "./views/FarmerJourney"; 
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+
+        <Route path="/farmer-journey" element={<FarmerJourney />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
