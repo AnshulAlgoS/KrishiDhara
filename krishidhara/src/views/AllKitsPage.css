@@ -99,7 +99,7 @@
 .discount-badge {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
   background: linear-gradient(45deg, #facc15, #f59e0b);
   color: #1b1b1b;
   font-size: 0.8rem;
