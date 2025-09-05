@@ -202,7 +202,7 @@
 }
 
 .footer-col ul li a:hover {
-  color: hsl(140, 60%, 60%); /* slightly brighter green on hover */
+  color: hsl(140, 60%, 60%); 
 }
 
 .footer-brand {
@@ -213,8 +213,8 @@
 }
 
 .footer-logo {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 90px;
 }
 
 .footer p {
