@@ -9,7 +9,7 @@ import thumb4 from "../assets/thumb4.jpeg";
 
 
 const VideoSection = () => {
-  // scroll function for carousel
+
   const scrollCarousel = (distance) => {
     document.getElementById("carousel").scrollBy({
       left: distance,
@@ -135,4 +135,5 @@ const VideoSection = () => {
 };
 
 export default VideoSection;
+
 
