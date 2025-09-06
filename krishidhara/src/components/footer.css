@@ -1,0 +1,209 @@
+.footer {
+    background: linear-gradient(135deg, hsl(140, 45%, 25%), hsl(110, 50%, 35%));
+    color: #f1faee;
+    padding: 50px 20px 20px;
+    font-family: "Poppins", sans-serif;
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    background: url("https://www.transparenttextures.com/patterns/green-gobbler.png");
+    opacity: 0.06;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.footer-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Footer Column 1, 2, 3 */
+.footer-col1,
+.footer-col2,
+.footer-col3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1;
+}
+
+.footer-col1 h4,
+.footer-col2 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    left: -40%;
+    color: #f1faee;
+    position: relative;
+}
+.footer-col3 h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    left: -45%;
+    color: #f1faee;
+    position: relative;
+}
+.footer-col1 h4::after,
+.footer-col2 h4::after,
+.footer-col3 h4::after {
+    content: "";
+    position: relative;
+    z-index: 5;
+    width: 30px;
+    height: 3px;
+    background: hsl(140, 60%, 60%);
+    bottom: -5px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.footer-col1 ul,
+.footer-col2 ul,
+.footer-col3 ul {
+    list-style: none;
+    left: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col1 ul li,
+.footer-col2 ul li,
+.footer-col3 ul li {
+    margin: 8px 0;
+}
+
+.footer-col1 ul li a,
+.footer-col2 ul li a,
+.footer-col3 ul li a {
+    text-decoration: none;
+    color: #f1faee;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.footer-col1 ul li a:hover,
+.footer-col2 ul li a:hover,
+.footer-col3 ul li a:hover {
+    color: hsl(140, 60%, 70%);
+    transform: translateX(5px);
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1faee;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: hsl(140, 50%, 30%);
+    transform: scale(1.15);
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid hsl(110, 50%, 20%);
+    font-size: 0.85rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 1.5rem;
+    }
+
+    .footer-logo {
+        width: 65px;
+        height: 60px;
+    }
+
+    .footer-container {
+        gap: 25px;
+    }
+}

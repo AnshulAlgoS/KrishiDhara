@@ -1,208 +1,225 @@
+/* ---------- Page Container ---------- */
 .all-kits-page {
-  min-height: 100vh;
-  padding: 5rem;
-  background: linear-gradient(135deg, #f5fbe7, #fffaf3, #f0fdf4, #fefce8);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
+    min-height: 100vh;
+    padding: 5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #f5fbe7, #fffaf3, #f0fdf4, #fefce8);
+    animation: gradientMove 15s ease infinite, fadeInUp 0.7s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Gradient animation */
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* ---------- Header Section ---------- */
 .marketplace-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 .marketplace-header h2 {
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  font-weight: 700;
-  color: #1b3b1b;
-  margin-bottom: 0.75rem;
-  line-height: 1.2;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: #1b3b1b;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
 }
 
 .marketplace-header h2 .highlight {
-  background: linear-gradient(45deg, #2f7c31, #a58c00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(45deg, #2f7c31, #a58c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .marketplace-header p {
-  font-size: clamp(1rem, 2.5vw, 1.15rem);
-  color: #444;
-  line-height: 1.7;
-  max-width: 720px;
-  margin: 0 auto;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: #444;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
 /* ---------- Add Kit Button ---------- */
 .header-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
 }
 
 .add-kit-btn {
-  background: linear-gradient(45deg, #2f7c31, #4caf50);
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.4rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: linear-gradient(45deg, #2f7c31, #4caf50);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .add-kit-btn:hover {
-  background: linear-gradient(45deg, #276427, #3f9142);
-  transform: translateY(-2px);
+    background: linear-gradient(45deg, #276427, #3f9142);
+    transform: translateY(-2px);
 }
 
 /* ---------- Kits Grid ---------- */
 .kits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 1.8rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.8rem;
 }
 
 /* ---------- Kit Card ---------- */
 .kit-card {
-  position: relative;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 14px;
-  padding: 1.5rem;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
+    position: relative;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
 }
 
 .kit-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Discount Badge */
 .discount-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: linear-gradient(45deg, #facc15, #f59e0b);
-  color: #1b1b1b;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.35rem 0.7rem;
-  border-radius: 6px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(45deg, #facc15, #f59e0b);
+    color: #1b1b1b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
 }
 
 /* Emoji / Icon */
 .kit-emoji {
-  font-size: 2rem;
-  margin-bottom: 0.6rem;
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
 }
 
 /* Title */
 .kit-card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1b3b1b;
-  margin-bottom: 0.4rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1b3b1b;
+    margin-bottom: 0.4rem;
 }
 
 /* Rating */
 .rating {
-  font-size: 0.9rem;
-  color: #f59e0b;
-  margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    color: #f59e0b;
+    margin-bottom: 0.6rem;
 }
 
 .rating span {
-  font-size: 0.8rem;
-  color: #64748b;
+    font-size: 0.8rem;
+    color: #64748b;
 }
 
 /* Description */
 .kit-description {
-  font-size: 0.92rem;
-  color: #555;
-  margin-bottom: 0.8rem;
-  line-height: 1.5;
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
 }
 
 /* Features List */
 .kit-features {
-  list-style: none;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: #333;
+    list-style: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #333;
 }
 
 .kit-features li {
-  margin-bottom: 0.35rem;
-  position: relative;
+    margin-bottom: 0.35rem;
+    position: relative;
 }
 
 .kit-features li::before {
-  content: "✔";
-  color: #16a34a;
-  position: absolute;
-  left: -1rem;
-  font-size: 0.8rem;
+    content: "✔";
+    color: #16a34a;
+    position: absolute;
+    left: -1rem;
+    font-size: 0.8rem;
 }
 
 /* Price */
 .kit-price {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
 }
 
 .current-price {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #2f7c31;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2f7c31;
 }
 
 .original-price {
-  font-size: 0.95rem;
-  color: #94a3b8;
-  text-decoration: line-through;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    text-decoration: line-through;
 }
 
 /* Add to Cart */
 .add-to-cart-btn {
-  width: 100%;
-  background: #2f7c31;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.4rem;
-  transition: background 0.2s ease, transform 0.2s ease;
+    width: 100%;
+    background: #2f7c31;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .add-to-cart-btn:hover {
-  background: #256628;
-  transform: translateY(-2px);
+    background: #256628;
+    transform: translateY(-2px);
 }

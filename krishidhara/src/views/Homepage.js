@@ -6,6 +6,7 @@ import CropFinderSection from "../components/CropFinderSection"
 import MarketplaceSection from "../components/MarketplaceSection"
 import "./Homepage.css"
 import logo from "../assets/krishiLogo.png"; 
+import Footer from "../components/footer"
 
 
 const HomePage = () => {
@@ -33,66 +34,7 @@ const HomePage = () => {
           </button>
         </div>
       </section>
-
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-col">
-            <div className="footer-brand">
-              <img
-                src={logo}
-                alt="Krishi Dhara Logo"
-                className="footer-logo"
-              />
-
-              <h2>Krishi Dhara</h2>
-            </div>
-            <p>
-              Empowering farmers with AI-powered insights, market access, and community support to transform agricultural land into sustainable livelihood opportunities.
-            </p>
-          </div>
-
-          <div className="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/mentoshi">Mentorship</a></li>
-              <li><a href="/stories">Stories</a></li>
-              <li><a href="/cropfinder">CropFinder</a></li>
-              <li><a href="/marketplace">Marketplace</a></li>
-            </ul>
-          </div>
-
-       
-          <div className="footer-col">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li>
-                <a href="mailto:info@krishidhara.com">
-                  info@krishidhara.com
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        
-          <div className="footer-col">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms & Conditions</a></li>
-            </ul>
-          </div>
-        </div>
-
-        
-        <div className="footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Krishi Dhara — From Land to Livelihood
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
