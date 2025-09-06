@@ -3,7 +3,8 @@ import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
-import Navbar from "../components/Navbar"; // ⬅️ Navbar import kiya
+import Navbar from "../components/Navbar"; 
+import Footer from "../components/footer";
 import "./AllKitsPage.css";
 
 export default function AllKitsPage() {
@@ -109,6 +110,7 @@ export default function AllKitsPage() {
           <p>No kits available yet.</p>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

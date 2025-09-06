@@ -2,6 +2,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/footer";
 import "./AddKitPage.css";
 
 export default function AddKitPage() {
@@ -206,6 +207,7 @@ export default function AddKitPage() {
           </form>
         </div>
       </div>
+        <Footer />
     </>
   );
 }
